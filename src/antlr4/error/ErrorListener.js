@@ -76,7 +76,10 @@ ConsoleErrorListener.INSTANCE = new ConsoleErrorListener();
 ConsoleErrorListener.prototype.syntaxError = function(recognizer, offendingSymbol, line, column, msg, e) {
 
 
-    window.syntaxErrorList.push({row:line-1 ,column: column, text:msg,type:"error"})
+
+    //SiddhiEditor.syntaxErrorList.push({row:line-1 ,column: column, text:msg,type:"error"})
+
+ console.error(" Error line " + line + ":" + column + " " + msg," recognizer:",recognizer," offendingSymbol:",offendingSymbol," e:",e);
 };
 
 function ProxyErrorListener(delegates) {
